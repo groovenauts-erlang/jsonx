@@ -79,7 +79,7 @@ encoder(Records_desc, Options) ->
 %%@doc Decode JSON to Erlang term.
 -spec decode(JSON) -> JSON_TERM when
       JSON      :: binary(),
-      JSON_TERM :: parsed_json().
+      JSON_TERM :: parsed_json() | {error, Reason :: term(), term()}.
 decode(JSON) ->
     decode_opt(JSON, eep18).
 
