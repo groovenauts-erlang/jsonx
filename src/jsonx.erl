@@ -49,7 +49,7 @@
 
 %%@doc Encode JSON.
 -spec encode(JSON_TERM) -> JSON when
-      JSON      :: binary(),
+      JSON      ::  binary() | {no_match, _},
       JSON_TERM :: any().
 encode(JSON_TERM)->
     encode1(JSON_TERM).
